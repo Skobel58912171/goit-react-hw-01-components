@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+// import { CardWrapper } from './Profile.styled';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
