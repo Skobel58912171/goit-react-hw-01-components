@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import { BsFillCircleFill } from 'react-icons/bs';
-const FriendListItem = ({ avatar, name }) => {
+import { Avatar, Circle } from './FriendListItem.styled';
+
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>
-      <span>
+      <Circle isOnline>
         <BsFillCircleFill />
-      </span>
-      <img src={avatar} alt="User avatar" width="48" />
+      </Circle>
+      <Avatar src={avatar} alt="User avatar" width="48" />
       <p>{name}</p>
     </>
   );
@@ -16,6 +18,7 @@ FriendListItem.propTypes = {
   friendListItem: PropTypes.exact({
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
   }),
 };
 export default FriendListItem;

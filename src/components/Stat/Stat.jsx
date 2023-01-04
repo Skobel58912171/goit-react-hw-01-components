@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-
-const Stat = ({label, percentage }) => (
+import { Value } from './Stat.styled';
+const Stat = ({ label, percentage }) => (
   <>
     <span>{label}</span>
-    <span>{percentage}</span>
+    <Value>{percentage}</Value>
   </>
 );
 

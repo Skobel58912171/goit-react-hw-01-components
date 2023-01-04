@@ -1,30 +1,41 @@
 import PropTypes from 'prop-types';
-// import { CardWrapper } from './Profile.styled';
+import {
+  CardWrapper,
+  Thumb,
+  Image,
+  Text,
+  TagContent,
+  LocationContent,
+  ListStats,
+  ItemStats,
+  LabelText,
+  QuantityText,
+} from './Profile.styled';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
-      </div>
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>{stats.views}</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+    <CardWrapper>
+      <Thumb>
+        <Image src={avatar} alt="User avatar" />
+        <Text>{username}</Text>
+        <TagContent>@{tag}</TagContent>
+        <LocationContent>{location}</LocationContent>
+      </Thumb>
+      <ListStats>
+        <ItemStats>
+          <LabelText>Followers</LabelText>
+          <QuantityText>{stats.followers}</QuantityText>
+        </ItemStats>
+        <ItemStats>
+          <LabelText>Views</LabelText>
+          <QuantityText>{stats.views}</QuantityText>
+        </ItemStats>
+        <ItemStats>
+          <LabelText>Likes</LabelText>
+          <QuantityText>{stats.likes}</QuantityText>
+        </ItemStats>
+      </ListStats>
+    </CardWrapper>
   );
 };
 export default Profile;
