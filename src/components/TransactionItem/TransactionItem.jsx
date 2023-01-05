@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-
+import { RowTable, CellTableValue } from './TransactionItem.styled';
 const TransactionItem = ({ type, amount, currency }) => {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <RowTable>
+      <CellTableValue>{type}</CellTableValue>
+      <CellTableValue>{amount}</CellTableValue>
+      <CellTableValue>{currency}</CellTableValue>
+    </RowTable>
   );
 };
 TransactionItem.propTypes = {

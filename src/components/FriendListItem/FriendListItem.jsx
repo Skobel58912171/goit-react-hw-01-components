@@ -5,7 +5,7 @@ import { Avatar, Circle } from './FriendListItem.styled';
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>
-      <Circle isOnline>
+      <Circle isOnline={isOnline}>
         <BsFillCircleFill />
       </Circle>
       <Avatar src={avatar} alt="User avatar" width="48" />

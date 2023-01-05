@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardWrapper = styled.div`
   padding: 40px 0 0;
   margin-left: 40px;
+  margin-top: 40px;
   background-color: #fff;
   border-radius: 8px;
 `;
@@ -58,20 +59,21 @@ export const ItemStats = styled.li`
   width: 161px;
 
   border: solid 1px #dcdcdc;
+  border-bottom: none;
   background-color: #f0f8ff;
 
   :last-child {
-    border-bottom: solid 1px #dcdc;
+    border-bottom: none;
     border-top: solid 1px #dcdc;
-    border-right: solid 1px #dcdc;
+    border-right: none;
     border-left: none;
     border-bottom-right-radius: 8px;
   }
   :first-child {
-    border-bottom: solid 1px #dcdc;
+    border-bottom: none;
     border-top: solid 1px #dcdc;
     border-right: none;
-    border-left: solid 1px #dcdc;
+    border-left: none;
     border-bottom-left-radius: 8px;
   }
 `;

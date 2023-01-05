@@ -14,7 +14,7 @@ export const App = () => {
         display: 'flex',
         gap: 40,
         justifyContent: 'start',
-        alignItems: 'center',
+        alignItems: 'baseline',
         fontSize: 40,
         backgroundColor: '#dee4e7',
         color: '#010101',

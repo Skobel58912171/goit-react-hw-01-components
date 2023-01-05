@@ -9,5 +9,10 @@ export const Avatar = styled.img`
 `;
 
 export const Circle = styled.span`
-  fill: 'red';
+  margin: 0;
+  svg {
+    color: ${props => {
+      return props.isOnline ? 'green' : 'red';
+    }};
+  }
 `;

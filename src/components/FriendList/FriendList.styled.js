@@ -9,7 +9,7 @@ export const FriendCards = styled.ul`
 
 export const Card = styled.li`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 20px;
   padding: 10px 200px 10px 20px;
